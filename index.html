@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credential Creator</title>
+    
+    <!-- import library of the dialog alert SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- import library to create a zip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header id="header-options">
+        <h1 id="mainTitle">Credential Creator</h1>
+        <input type="file" id="inputUsers" style="display:none" accept="text/csv">
+        <button id="loadUsers" class="button is-link">Load Users</button>        
+    
+        <button id="generateCredentials" class="button is-primary" disabled>Generate Credentials</button>
+        <p>Please select a CSV file.</p>
+    </header>    
+
+    <div id="vew-table">
+        <table id="table-list-credentials"></table>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modal-content">
+          <button id="butto-close-model" class="button is-dark" onclick="closeModal()">Close</button>
+          <!-- modal content goes here -->
+        </div>
+    </div>
+
+    <!-- Link to Js files -->
+    <script src="./js/main.js"></script>    
+</body>
+</html>
